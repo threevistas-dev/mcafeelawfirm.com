@@ -1,13 +1,4 @@
-/* ==========================================================================
-   MCAFEE LAW FIRM — 2026 EDITORIAL REDESIGN
-   Custom CSS3 Design System
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. CSS Custom Properties / Design Tokens
-   -------------------------------------------------------------------------- */
 :root {
-  /* Brand Palette (Strictly Preserved from Original Site) */
   --color-primary: #db4353;
   --color-primary-hover: #b82e3d;
   --color-primary-light: rgba(219, 67, 83, 0.08);
@@ -35,18 +26,15 @@
   --color-border-light: rgba(0, 0, 0, 0.08);
   --color-border-light-hover: rgba(219, 67, 83, 0.35);
 
-  /* Typography Scale */
   --font-heading: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans:
     "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
 
-  /* Layout Containers */
   --container-width: 1320px;
   --container-gutter: 1rem;
 
-  /* Spacing Scale */
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -56,14 +44,12 @@
   --space-2xl: 6rem;
   --space-3xl: 8.5rem;
 
-  /* Elevation Shadows */
   --shadow-xs: 0 2px 6px rgba(15, 23, 42, 0.04);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 48px -12px rgba(0, 0, 0, 0.16);
   --shadow-card-hover: 0 24px 50px -10px rgba(13, 17, 23, 0.2);
 
-  /* Border Radii (Subtle, Editorial Precision) */
   --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -71,19 +57,14 @@
   --radius-xl: 20px;
   --radius-full: 9999px;
 
-  /* Header & Utility Heights */
   --utility-height: 38px;
   --header-height: 78px;
   --header-height-scrolled: 64px;
 
-  /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --------------------------------------------------------------------------
-   2. Reset & Global Box Sizing
-   -------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -133,7 +114,6 @@ select {
   color: inherit;
 }
 
-/* Accessibility Skip Link */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -150,7 +130,6 @@ select {
   top: 20px;
 }
 
-/* Container */
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -160,9 +139,6 @@ select {
   padding-right: var(--container-gutter);
 }
 
-/* --------------------------------------------------------------------------
-   3. Buttons & Interactive Links
-   -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -225,9 +201,6 @@ select {
   transform: translateX(4px);
 }
 
-/* --------------------------------------------------------------------------
-   4. Utility Bar & Header
-   -------------------------------------------------------------------------- */
 .top-utility-bar {
   background-color: #0b0f14;
   color: #9da7b3;
@@ -251,8 +224,8 @@ select {
 .utility-badge {
   display: inline-block;
   padding: 0.15rem 0.5rem;
-  background: rgba(219, 67, 83, 0.2);
-  color: #ff7b89;
+  background: transparent;
+  color: #ffffff;
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -260,7 +233,7 @@ select {
   border-radius: var(--radius-xs);
 }
 .utility-address {
-  color: #8b949e;
+  color: #ffffff;
 }
 .utility-right {
   display: flex;
@@ -281,7 +254,6 @@ select {
   color: var(--color-primary);
 }
 
-/* Site Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -312,7 +284,6 @@ select {
   height: var(--header-height-scrolled);
 }
 
-/* Header Logo */
 .header-logo-col {
   flex-shrink: 0;
 }
@@ -338,7 +309,6 @@ select {
   display: none;
 }
 
-/* Primary Navigation */
 .main-navigation {
   display: flex;
   align-items: center;
@@ -389,7 +359,6 @@ select {
   transform: rotate(180deg);
 }
 
-/* Mega & Standard Dropdowns */
 .nav-mega-dropdown {
   position: absolute;
   top: 100%;
@@ -502,13 +471,13 @@ select {
 .dropdown-links-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem 1.25rem;
+  gap: 15px;
 }
 .mega-card-item {
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
-  padding: 0.75rem 0.95rem;
+  padding: 10px;
   border-radius: var(--radius-sm);
   background-color: #ffffff;
   border: 1px solid transparent;
@@ -543,7 +512,6 @@ select {
   margin-top: 0.15rem;
 }
 
-/* Header Action Right */
 .header-action-col {
   display: flex;
   align-items: center;
@@ -576,7 +544,6 @@ select {
   font-size: 0.8rem;
 }
 
-/* Mobile Menu Toggle */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -604,7 +571,6 @@ select {
   transform: translateY(-4px) rotate(-45deg);
 }
 
-/* Mobile Drawer */
 .mobile-drawer {
   position: fixed;
   top: 0;
@@ -613,7 +579,6 @@ select {
   max-width: 420px;
   height: 100vh;
   background-color: #ffffff;
-  /* box-shadow: -10px 0 40px rgba(0, 0, 0, 0.2); */
   z-index: 9999;
   transform: translateX(100%);
   transition: transform var(--transition-smooth);
@@ -728,9 +693,6 @@ select {
 .no-brd {
   border-bottom: 0 !important;
 }
-/* --------------------------------------------------------------------------
-   5. Hero Section
-   -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
   background: linear-gradient(135deg, #ffffff 0%, #faf8f5 60%, #f4efe9 100%);
@@ -760,7 +722,6 @@ select {
   z-index: 2;
 }
 
-/* Full-Width Accident Foreground Hero (landing.html) */
 .hero-section-accident-fw {
   position: relative;
   background: linear-gradient(135deg, #ffffff 0%, #faf8f5 60%, #f4efe9 100%);
@@ -796,7 +757,6 @@ select {
   justify-content: center;
 }
 
-/* Full-Width Foreground Image Showcase */
 .hero-fw-image-showcase {
   width: 100%;
 }
@@ -886,9 +846,6 @@ select {
   }
 }
 
-/* ==========================================================================
-   Hero Banner with Full-Width Accident Image & Floating Estimate Form (landing.html)
-   ========================================================================== */
 .hero-banner-consult-section {
   position: relative;
   min-height: 640px;
@@ -934,7 +891,6 @@ select {
   width: 100%;
 }
 
-/* Left Hero Banner Copy */
 .hero-banner-copy-col {
   color: #ffffff;
 }
@@ -1008,7 +964,6 @@ select {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Right White Estimate Form Card (Matching Reference Screenshot) */
 .hero-banner-form-col {
   display: flex;
   justify-content: flex-end;
@@ -1119,7 +1074,6 @@ select {
   }
 }
 
-/* Accident Background Hero Variant (optional background version) */
 
 .hero-section-accident .hero-bg-texture {
   opacity: 0.15;
@@ -1172,7 +1126,6 @@ select {
   color: #ffffff;
 }
 
-/* Hero Left Content */
 .hero-text-col {
   display: flex;
   flex-direction: column;
@@ -1266,7 +1219,6 @@ select {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Right Image Frame */
 .hero-image-col {
   position: relative;
   display: flex;
@@ -1317,7 +1269,6 @@ select {
   transform: scale(1.04);
 }
 
-/* Floating Card */
 .hero-floating-card {
   position: absolute;
   bottom: -22px;
@@ -1358,9 +1309,6 @@ select {
   color: var(--color-text-muted);
 }
 
-/* --------------------------------------------------------------------------
-   6. Trust & Credibility Strip
-   -------------------------------------------------------------------------- */
 .trust-strip-section {
   background-color: #ffffff;
   padding: 2.25rem 0;
@@ -1413,12 +1361,8 @@ select {
   width: auto;
   max-width: 110px;
   object-fit: contain;
-  /* filter: grayscale(100%) contrast(90%) opacity(0.7); */
   transition: all var(--transition-fast);
 }
-/* .trust-logo-card:hover .trust-logo {
-  filter: grayscale(0%) contrast(100%) opacity(1);
-} */
 .logo-caption {
   font-size: 0.65rem;
   font-weight: 600;
@@ -1427,9 +1371,6 @@ select {
   letter-spacing: 0.02em;
 }
 
-/* --------------------------------------------------------------------------
-   7. Section Headers & Universal Labels
-   -------------------------------------------------------------------------- */
 .section-label-group {
   margin-bottom: 1.5rem;
 }
@@ -1467,9 +1408,6 @@ select {
   margin-top: 0.85rem;
 }
 
-/* --------------------------------------------------------------------------
-   8. Introduction Section (Why McAfee Law Firm?)
-   -------------------------------------------------------------------------- */
 .intro-section {
   padding: 6rem 0;
   background-color: var(--color-cream);
@@ -1549,7 +1487,6 @@ select {
   gap: 1rem;
 }
 
-/* Intro Media */
 .intro-image-wrapper {
   position: relative;
   border-radius: var(--radius-md);
@@ -1585,13 +1522,11 @@ select {
   display: flex;
   flex-direction: column;
   z-index: 3;
-  /* border-radius: var(--radius-lg); */
   box-shadow: var(--shadow-lg);
   border: 1px solid #e2e8f0;
   padding: 0.85rem 1.25rem;
   display: flex;
   align-items: center;
-  /* gap: 1rem; */
 }
 .caption-firm {
   font-size: 1rem;
@@ -1607,9 +1542,6 @@ select {
   margin-top: 0.2rem;
 }
 
-/* --------------------------------------------------------------------------
-   9. Practice Areas Grid (8 Editorial Cards)
-   -------------------------------------------------------------------------- */
 .practice-areas-section {
   padding: 6.5rem 0;
   background-color: #ffffff;
@@ -1647,9 +1579,6 @@ select {
   box-shadow: var(--shadow-card-hover);
   border-color: rgba(219, 67, 83, 0.35);
 }
-/* .practice-card:hover::before {
-  background-color: var(--color-primary);
-} */
 
 .card-top-row {
   display: flex;
@@ -1739,9 +1668,6 @@ select {
   color: var(--color-primary);
 }
 
-/* --------------------------------------------------------------------------
-   10. Attorney Spotlight Section (Edward T. McAfee)
-   -------------------------------------------------------------------------- */
 .attorney-spotlight-section {
   padding: 7rem 0;
   background-color: #faf9f6;
@@ -1866,9 +1792,6 @@ select {
   gap: 1rem;
 }
 
-/* --------------------------------------------------------------------------
-   11. Immersive Story & Video ("Concrete Beam Falls From Bridge")
-   -------------------------------------------------------------------------- */
 .story-video-section {
   padding: 6.5rem 0;
   background-color: #0b0f15;
@@ -1884,7 +1807,6 @@ select {
   gap: 4rem;
 }
 
-/* Left Column Content */
 .story-content-col {
   display: flex;
   flex-direction: column;
@@ -1939,7 +1861,6 @@ select {
   max-width: 540px;
 }
 
-/* Quote Card Box */
 .story-card-box {
   background-color: #121821;
   border-left: 3px solid #eb4f5f;
@@ -1968,7 +1889,6 @@ select {
   color: #eb4f5f;
 }
 
-/* Action Buttons Row */
 .story-actions-row {
   display: flex;
   align-items: center;
@@ -2023,7 +1943,6 @@ select {
   transform: translateY(-2px);
 }
 
-/* Right Column Media */
 .story-media-col {
   display: flex;
   flex-direction: column;
@@ -2136,9 +2055,6 @@ select {
   color: #657485;
 }
 
-/* --------------------------------------------------------------------------
-   12. Attorney Referrals Section
-   -------------------------------------------------------------------------- */
 .referrals-section {
   padding: 6rem 0;
   background-color: #ffffff;
@@ -2243,9 +2159,6 @@ select {
   display: flex;
 }
 
-/* --------------------------------------------------------------------------
-   13. Consultation Section & High Impact Form
-   -------------------------------------------------------------------------- */
 .consultation-section {
   padding: 7.5rem 0;
   background: linear-gradient(135deg, #090c10 0%, #161b22 100%);
@@ -2357,7 +2270,6 @@ select {
   color: #ffffff;
 }
 
-/* Consultation Form Column */
 .consultation-form-col {
   background: #ffffff;
   border-radius: var(--radius-md);
@@ -2473,9 +2385,6 @@ select {
   flex-shrink: 0;
 }
 
-/* --------------------------------------------------------------------------
-   14. Action Banner Section
-   -------------------------------------------------------------------------- */
 .action-banner-section {
   background-color: #db4353;
   color: #ffffff;
@@ -2519,9 +2428,6 @@ select {
   transform: translateY(-2px);
 }
 
-/* --------------------------------------------------------------------------
-   15. Editorial Dark Footer
-   -------------------------------------------------------------------------- */
 .site-footer {
   background-color: #090c10;
   color: #8b949e;
@@ -2641,7 +2547,6 @@ select {
   color: #c6c9cb;
 }
 
-/* Footer Bottom Bar */
 .footer-bottom-bar {
   background-color: #06080b;
   border-top: 1px solid rgba(255, 255, 255, 0.185);
@@ -2661,6 +2566,27 @@ select {
   align-items: center;
   gap: 0.65rem;
 }
+.footer-site-by {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 0.15rem;
+}
+.footer-site-label {
+  line-height: 1.2;
+}
+.footer-site-logo-row {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+}
+.footer-site-logo {
+display: block;
+width: auto;
+height: 20px;
+opacity: 0.8;
+margin-left: 8px;
+}
 .footer-credits a:hover {
   color: #ffffff;
 }
@@ -2672,9 +2598,6 @@ select {
   color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   16. Media Queries & Responsive Adaptations
-   -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .practice-grid {
     grid-template-columns: repeat(2, 1fr);
